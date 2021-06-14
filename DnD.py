@@ -1,4 +1,3 @@
-### DO NOT CHANGE CODE IN THIS BLOCK ###
 import random
 
 # Enemies defined in different dictionaries
@@ -12,9 +11,6 @@ enemies = [vampire, goblin, ghost, dracula]
 
 # Player dictionary
 player = {"name":"", "attack":"2d5", "defense": "1d3", "maxhp":200, "curhp":200}
-###########################################
-# START YOUR CODE BELOW THIS LINE
-###########################################
 
 def get_roll(rollstring):
     splt = (rollstring.split('d'))
@@ -56,7 +52,7 @@ def do_battle(player, enemy):
         print(("{} hp: ").format(player["name"]), php)
         print(("{} hp: ").format(enemy["name"]), ehp)
 
-# This is a complete function; do not modify
+
 def main_menu_goto_battle():
     enemy = enemies[random.randint(0,len(enemies)-1)]
     if do_battle(player, enemy):
@@ -68,14 +64,14 @@ def main_menu_goto_battle():
 
     return
 
-# This is a complete function; do not modify
+
 def main_menu_heal():
     print(f"The player takes rest under a healing fountain. HP restored!")
     player['curhp'] = player['maxhp']
     input("Press enter to return home")
     return
 
-# This is a complete function; do not modify
+
 def main_menu():
     # Player dies if player HP reaches 0 or less
     while player['curhp'] > 0:
@@ -95,8 +91,8 @@ def main_menu():
 
     print("Player is dead!")
 
-###### DO NOT CHANGE THIS CODE #########
+
 player['name'] = input("What is the player's name? ")
 main_menu()
-########################################
+
 
